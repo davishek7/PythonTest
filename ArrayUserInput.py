@@ -18,4 +18,14 @@ for e in arr:
         break
     k+=1
 
-print(arr.index(val))
+else:
+    print('not available in the array')
+
+val1=int(input('enter another element for search'))
+
+for e in arr:
+    if e==val1:
+        print(arr.index(val1))
+        break
+else:
+    print('not available in the array')
