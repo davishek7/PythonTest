@@ -1,4 +1,4 @@
-from numpy import *
+from numpy import array
 
 arr1=array([1,2,5,9])
 arr2=arr1
