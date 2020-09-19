@@ -6,3 +6,5 @@ if x>1:
             break
     else:
         print('Prime number')
+else:
+    print("Please enter a value greater than 1")
