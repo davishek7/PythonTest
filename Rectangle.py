@@ -14,6 +14,7 @@ def main():
     print(result1)
     result2=area(length,breadth)
     print(result2)
-    
+
 if __name__=='__main__':
     main()
+    print()
