@@ -5,29 +5,20 @@ Write a Python function primeproduct(m) that takes an integer m as input and
 returns True if m is a prime product and False otherwise. 
 (If m is not positive, your function should return False.)
 """
-def get_factors(m):
-
-    factors=[]
-
-    for i in range(1,m):
-        if m%i==0:
-            factors.append(i)
-    return factors
-
-def prime_check(m):
-    if len(get_factors(m))<3:
-        return True
-    else:
-        return False
-
+from math import sqrt
 def primeproduct(m):
-    factors=get_factors(m)
-    if len(factors)>2 and factors[1]!=2:
-        return True
-    else:
-        return False
+    for d1 in range(2,int(sqrt(m)+1)):
+        if m%d1==0:
+            d2=m/d1
+            return is_Prime(d1) and is_Prime(d2)
+    return False
 
-result=primeproduct(46)
+def is_Prime(n):
+    for i in range(2,int(sqrt(n)+1)):
+        if n%i==0:
+            return False
+        
+    return True
+
+result=primeproduct(202)
 print(result)
-prime=prime_check(6)
-print(prime)
