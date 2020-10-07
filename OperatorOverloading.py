@@ -10,7 +10,7 @@ class Calc:
         m1=self.m1+self.m2
         m2=other.m1+other.m2
 
-        return m1,m2
+        return "{} {}".format(m1,m2)
     
     def __gt__(self,other):
 
@@ -33,6 +33,9 @@ class Calc:
             s3=s2-s1
         
         return s3
+    
+    def __str__(self):
+        return "{} {}".format(self.m1,self.m2)
 
 c1=Calc(12,10)
 c2=Calc(14,16)
@@ -42,9 +45,11 @@ if c1>c2:
 else:
     print("c2 wins")
 
+print(c1.__str__())
+print(c2.__str__())
+
 c3=c1+c2
-print(c3)
+print(c3.__str__())
 
 c4=c1-c2
 print(c4)
-
